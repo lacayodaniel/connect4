@@ -1,0 +1,20 @@
+1. Daniel Lacayo
+
+2. Bot's Name is B0b
+
+3. The utility function rewards successor states based on wether or not a streak
+greater or equal to 3 can form (with larger completed streaks being rewarded
+more). My evaluation function considers this in addition to rewarding successor
+states that eliminate any potential counter-play. For example, it is better to
+fill a space that blocks an opponent from scoring multiple streaks than it is
+to fill a space that scores you a minor streak. To do this, I replace all
+blanks with the opposite player's pieces, thus over simulating the opponents
+possible counter play moves. 
+
+4. test_3 is a board designed to test if the computer will make blocking moves that
+are more powerful than scoring moves. Minimax says the best move for player 2 in
+this state is column 0, extending a 3 streak to a 4 streak (+7 points). My
+heuristic says the best move is column 1 because it prevents player 1 from
+forming 2 streaks of 3 (-18 points).
+
+5. All working
